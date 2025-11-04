@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AuraMine - Crypto Mining Simulator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#6A3DE8',
+              'brand-secondary': '#8B5CF6',
+              'brand-accent': '#3B82F6',
+              'dark-bg': '#0D0F1A',
+              'dark-card': '#1A1C2A',
+              'dark-border': '#2D3040',
+              'light-text': '#E0E0E0',
+              'medium-text': '#A0A0B0',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            keyframes: {
+              pulseGlow: {
+                '0%, 100%': { boxShadow: '0 0 10px rgba(106, 61, 232, 0.5), 0 0 20px rgba(139, 92, 246, 0.3)' },
+                '50%': { boxShadow: '0 0 20px rgba(106, 61, 232, 0.8), 0 0 40px rgba(139, 92, 246, 0.5)' },
+              },
+              fadeIn: {
+                '0%': { opacity: 0, transform: 'translateY(10px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
+              },
+            },
+            animation: {
+              pulseGlow: 'pulseGlow 3s ease-in-out infinite',
+              fadeIn: 'fadeIn 0.5s ease-out forwards',
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-dark-bg text-light-text">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
